@@ -1,9 +1,8 @@
 const mongoose = require('mongoose')
 
 const vehicleSchema =  mongoose.Schema({
-     vehicleName: {
+  vehicleName: {
       type: "String",
-      unique:true,
       required: [true,'Please add a VehicleName']
      },
      vehicleSpeed:{
@@ -26,6 +25,7 @@ const vehicleSchema =  mongoose.Schema({
 const scenarioSchema = mongoose.Schema({
       scenarioName: {
         type: "String",
+        unique:true,
         required: [true,'Please add a ScnarioName']
       },
       scenarioTime: {
